@@ -29,7 +29,7 @@ public class HelloTraceV1 {
     complete(status, e);
   }
 
-  public void complete (TraceStatus status, Exception e) {
+  private void complete (TraceStatus status, Exception e) {
     long stopTimeMs = System.currentTimeMillis();
     long resultTimeMs = stopTimeMs - status.getStartTimeMs();
     TraceId traceId = status.getTraceId();
