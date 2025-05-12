@@ -1,7 +1,7 @@
 package dev.riss.spring_advanced.config;
 
-import dev.riss.spring_advanced.trace.logtrace.FieldLogTrace;
 import dev.riss.spring_advanced.trace.logtrace.LogTrace;
+import dev.riss.spring_advanced.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +10,6 @@ public class LogTraceConfig {
 
   @Bean
   public LogTrace logTrace() {
-    return new FieldLogTrace();
+    return new ThreadLocalLogTrace();
   }
 }
